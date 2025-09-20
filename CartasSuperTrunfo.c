@@ -11,7 +11,9 @@ int main(){
     float area;
     float PIB;
     float turismo;
-
+    float densidadeP;
+    float PIBpercapita;
+    
     //CARTA B
 
     char cartaB[50];
@@ -21,69 +23,79 @@ int main(){
     float terreno;
     float produtointernobruto;
     float pontos;
+    float Dpopulacional;
+    float PPC;
 
     //CARTA A - LEITURA DE INFORMAÇÕES
 
-    printf("digite o estado:\n");
-    scanf("%s", cartaA);
-
-    printf("digite a carta:\n");
-    scanf("%s", carta1);
-
-    printf("digite a cidade:\n");
-    scanf("%s", cidade);
+    printf("Digite o estado:\n");
+    scanf("%s",cartaA);
     
+    printf("Digite a cidade:\n");
+    scanf("%s", cidade);
 
-    printf("digite o número de habitantes:\n");
+    printf("Digite o número de habitantes:\n");
     scanf("%d", &populacao);
 
-    printf("digite a área demarcada:\n");
+    printf("Digite a area demarcada:\n");
     scanf("%f", &area);
 
-    printf("digite o PIB:\n");
-    scanf("%f", &PIB);
+    printf("Densidade populacional: %.2f\n", densidadeP = populacao / area);
     
-    printf("digite os pontos de turismo:\n");
+    printf("Digite o PIB:\n");
+    scanf("%f", &PIB);
+
+    printf("PIB Per Capita: %.2f\n", PIBpercapita = PIB / populacao);
+    
+    printf("Digite os pontos de turismo:\n");
     scanf("%f", &turismo);
+
+    printf("Digite o código da carta:\n");
+    scanf("%s", carta1);
 
     printf("-------------------------------------");
     
 
     //SAIDA DAS INFORMAÇÕES DA CARTA A
 
-    printf("\nEstado: %s \n Cidade: %s \n Habitantes: %d \n Área: %f \n PIB: %f \n Número de turismo: %f \n Número da Carta: \n %s", cartaA, cidade, populacao, area, PIB, turismo, carta1);
+    printf("\nEstado: %s \n Cidade: %s \n Habitantes: %d \n Area: %f \n Densidade Populacional: %.2f \n PIB: %f \n PIB Per Capita: %.2f \n Pontos de turismo: %f \n Numero da Carta: \n %s", cartaA, cidade, populacao, area, densidadeP, PIB, PIBpercapita, turismo, carta1);
+
     
     printf("\n--------------------\n--------------------\n");
 
     
     //CARTA B - LEITURA DE INFORMAÇÕES
 
-    printf("digite o estado:\n");
+    printf("Digite o estado:\n");
     scanf("%s", cartaB);
 
-    printf("digite o código da carta:\n");
-    scanf("%s", carta2);
-
-    printf("digite a cidade:\n");
+    printf("Digite a cidade:\n");
     scanf("%s", municipio);
 
-    printf("digite o número de habitantes:\n");
+    printf("Digite o número de habitantes:\n");
     scanf("%d", &habitantes);
 
-    printf("digite a área demarcada:\n");
+    printf("Digite a area demarcada:\n");
     scanf("%f", &terreno);
 
-    printf("digite o PIB:\n");
+    printf("Densidade populacional: %.2f\n", Dpopulacional = habitantes / terreno);
+
+    printf("Digite o PIB:\n");
     scanf("%f", &produtointernobruto);
 
-    printf("digite os pontos de turismo:\n");
+    printf("PIB Per Capita: %.2f\n", PPC = produtointernobruto / habitantes);
+
+    printf("Digite os pontos de turismo:\n");
     scanf("%f", &pontos);
+
+    printf("Digite o código da carta:\n");
+    scanf("%s", carta2);
 
     printf("------------------------------");
     
     //SAÍDA DAS INFORMAÇÕES DA CARTA B
 
-    printf("\n Estado: %s \n Cidade: %s \n Habitantes: %d \n Área: %f \n PIB: %f \n Número de turismo: %f \n Número da Carta: %s \n", cartaB, municipio, habitantes, terreno, produtointernobruto, pontos, carta2);
+    printf("\n Estado: %s \n Cidade: %s \n Habitantes: %d \n Area: %f Area Demarcada: %.2f \n PIB: %f \n PIB Per Capita: %.2f \n Número de turismo: %f \n Numero da Carta: %s \n", cartaB, municipio, habitantes, terreno, Dpopulacional, produtointernobruto, PPC, pontos, carta2);
 
     
 
